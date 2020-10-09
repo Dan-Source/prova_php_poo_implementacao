@@ -48,7 +48,7 @@ class ItemLeilao
     {
         $valor = $lance->getValorLance();
         $lance_min = $this->lance_minimo;
-
+        array_push($this->lances, $lance);
         if($valor > $lance_min){
             echo "Lance Registrado. <br>";
             $this->lance_minimo = $valor;
